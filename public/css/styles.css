@@ -1,20 +1,240 @@
-html, body {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0px;
+:root {
+	--white: #f4f4f4;
+	--black: #333;
 }
 
-nav ul {
-    list-style: none; 
-    padding-left:0;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-nav li {
-    display:inline;
 
+body {
+	font-family: "Arial", sans-serif;
+	line-height: 1.6;
+	color: var(--black);
+	background-color: var(--white);
 }
+
+header {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 20px 32px;
+	background-color: var(--main);
+	color: white;
+}
+
+#university_project {
+	margin-left: auto;
+	align-self: flex-end;
+	font-style: italic;
+}
+
+#logo {
+	width: 64px;
+	height: 64px;
+}
+
+#navbar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--dark);
+	flex-wrap: wrap;
+}
+
+#navbar a {
+	color: var(--white);
+	text-decoration: none;
+	padding: 16px 64px;
+	font-weight: bold;
+	transition: all 0.3s ease;
+}
+
+#navbar a:hover {
+	background: var(--altmain);
+	transform: scale(1.1);
+}
+
 .active {
-    color :white;
-    background-color:green;
-    padding:0.5em;
+	border-bottom: 6px solid var(--altmain);
+}
 
+.hero {
+	text-align: center;
+	padding: 32px;
+}
+
+.hero h2 {
+	font-size: xx-large;
+}
+
+.hero table {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.button {
+	display: inline-block;
+	background-color: var(--main);
+	color: var(--white);
+	padding: 16px;
+	text-decoration: none;
+	border-bottom: 4px solid var(--dark);
+	border-right: 4px solid var(--dark);
+	border-left: 4px solid var(--light);
+	border-top: 4px solid var(--light);
+	transition: all 0.3s ease;
+}
+
+.hero img {
+	max-width: 90%;
+}
+
+.button:hover {
+	transform: scale(1.1);
+}
+
+footer {
+	margin-top: 100px;
+	padding: 25px;
+	background-color: rgba(173, 173, 173, 0.322);
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+	color: black;
+}
+
+footer nav ul {
+	list-style: none;
+}
+
+footer nav ul li {
+	display: inline;
+	margin: 0 20px;
+}
+
+footer nav ul li a {
+	color: #333;
+	text-decoration: none;
+}
+footer nav ul li a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+/* Timeline page*/
+
+.columnflex {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: stretch;
+}
+
+.timeline {
+	width: 100%;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	padding: 6% 10% 0;
+	align-items: center;
+	min-width: 80vw;
+}
+
+.timeline h2 {
+	font-size: xx-large;
+}
+
+.timeline h3 {
+	font-size: larger;
+	text-decoration: underline;
+}
+
+.source {
+	font-style: italic;
+	color: #9590a8;
+	text-decoration: none;
+}
+
+.source:hover {
+	text-decoration: underline;
+}
+
+.timeline-events article:hover {
+	transform: scale(1.05);
+}
+
+.timeline-events article {
+	background-color: #ececec;
+	padding: 5px 15px;
+	margin: 4px 0px;
+	border-left: 4px solid #afafaf;
+	transition: all 0.3s ease;
+	overflow: auto;
+}
+
+aside {
+	text-align: center;
+	padding: 0 16px;
+	background-color: var(--dark);
+	flex: 1 1 50px; /* grow, shrink, base width */
+}
+
+aside ul {
+	text-decoration: none;
+	list-style-type: none;
+}
+
+aside a {
+	display: inline-block;
+	background-color: var(--main);
+	color: var(--white);
+	padding: 16px;
+	margin-bottom: 8px;
+	text-decoration: none;
+	border-bottom: 4px solid var(--dark);
+	border-right: 4px solid var(--dark);
+	border-left: 4px solid var(--light);
+	border-top: 4px solid var(--light);
+	transition: all 0.3s ease;
+}
+
+aside a:hover {
+	transform: scale(1.1);
+}
+
+/*Newspaper Section*/
+.news-section {
+	padding: 40px 10%;
+	background-image: url("../images/newirishships.jpg");
+	background-size: cover;
+}
+
+.columns {
+	column-count: 3;
+	column-gap: 40px;
+	column-rule: 2px solid var(--dark);
+}
+
+.columns article {
+	break-inside: avoid; /* used to stop the article from being split across columns */
+}
+
+/* about us */
+table,
+th,
+td {
+	border: 1px solid var(--light); /* Adding borders around each cell */
+}
+
+table {
+	border-collapse: collapse; /*Needed so that the there aren't double borders*/
+}
+
+th,
+td {
+	padding: 5px 10px;
 }

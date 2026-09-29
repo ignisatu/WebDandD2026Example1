@@ -1,7 +1,47 @@
-<main>
-    <h1>Contact</h1>
-    <p>This is content on the contact page. Can you change it to give
-        your own contact deails. It has changed.
-        
-        </p>
-</main>
+	<main>
+		<section class="centre">
+
+			<form action="http://foo.com" method="get">
+				<h2>Contact Us</h2>
+				<fieldset>
+					<label for="name">Full name:<span class="required">*</span></label>
+					<input type="text" id="name" name="name" autofocus required>
+				</fieldset>
+				<fieldset>
+					<label for="email">Email:<span class="required">*</span></label>
+					<input type="email" id="email" name="email" placeholder="email@example.com" required>
+				</fieldset>
+
+				<fieldset>
+					<label for="phone">Phone:</label>
+					<input type="tel" id="phone" name="phone">
+				</fieldset>
+
+				<fieldset>
+					<legend>Reason for contact:</legend>
+					<div class="radio-group">
+						<label><input type="radio" name="reason" id="question" value="question"
+								checked>Question</label>
+						<label><input type="radio" name="reason" id="submission"
+								value="submission">Submission of
+							an Artefact</label>
+						<label><input type="radio" name="reason" id="partnership"
+								value="partnership">Partnership</label>
+						<label><input type="radio" name="reason" id="other" value="other">Other</label>
+					</div>
+				</fieldset>
+
+				<fieldset>
+					<label for="message">Message:<span class="required">*</span></label>
+					<textarea id="message" name="message" required></textarea>
+				</fieldset>
+
+
+				<input class="button" type="submit" name="submit" value="submit">
+				<input class="button" type="reset" name="reset" value="reset">
+
+
+			</form>
+		</section>
+
+	</main>

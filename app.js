@@ -52,6 +52,20 @@ app.get('/contact', (req, res) => {
     console.log('contact')
   });
 
+  app.get('/about', (req, res) => {
+    state={about : true}
+    head={title:"About us - Week 1"}
+    res.render('about', { state, head});
+    console.log('about')
+});
+
+  app.get('/timeline', (req, res) => {
+    state={timeline : true}
+    head={title:"About us - Week 1"}
+    res.render('timeline', { state, head});
+    console.log('timeline')
+});
+
 
 // Start the server
 app.listen(3000, () => {
