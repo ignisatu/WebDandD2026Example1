@@ -1,3 +1,71 @@
+<style>
+		:root {
+			--main: #899DFF;
+			--light: #A5C2FF;
+			--dark: #7F7CFF;
+			--altmain: #AAA3FF;
+			--black: #333;
+		}
+
+		/* Using a flexbox to centre the items */
+		.centre {
+			margin-top: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+
+		}
+
+		/* flexbox to organise each field */
+		/* rem = base font size*/
+		fieldset {
+			display: flex;
+			flex-direction: column;
+			gap: 5px;
+			margin-bottom: 1rem;
+			border: 0px;
+
+		}
+		fieldset label,
+		fieldset legend {
+			font-size: 14px;
+			font-weight: 500;
+			color: var(--black);
+		}
+
+		/*we do not want to include the radios
+		box sizing: border-box makes it so that padding is included in the calculation of widith and height*/
+		fieldset input[type="text"],
+		fieldset input[type="email"],
+		fieldset input[type="tel"] {
+			padding: 8px 12px;
+			border: 2px solid var(--light);
+			border-radius: 5px;
+			font-size: 15px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+
+		.radio-group {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+		}
+
+		.radio-group label {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			cursor: pointer;
+		}
+
+
+
+		.required {
+			color: red;
+		}
+	</style>	
 	<main>
 		<section class="centre">
 

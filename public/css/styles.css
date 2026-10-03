@@ -238,3 +238,50 @@ th,
 td {
 	padding: 5px 10px;
 }
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin: 1%;
+}
+
+.card {
+	border: 1px solid lightgrey;
+	background: lightblue;
+	width: 100%;
+	padding: 0px 5px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+	.card {
+		width: calc(50% - 30px);
+	}
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+	.card {
+		width: calc(33.333% - 30px);
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.img-desktop {
+	display: none;
+}
+
+@media (min-width: 876px) {
+	.img-mobile {
+		display: none;
+	}
+
+	.img-desktop {
+		display: block;
+	}
+}
